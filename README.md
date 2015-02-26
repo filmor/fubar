@@ -20,6 +20,11 @@ to/from specific client IDs or topics.
 
 ---
 ## Getting Started ##
+### Install rebar ###
+One of the following:
+
+    $ sudo apt-get install rebar
+    $ brew install rebar
 
 ### Getting dependencies and building ###
 
