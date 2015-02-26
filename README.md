@@ -63,13 +63,9 @@ You can check the broker state.
 
 ### Playing with the broker ###
 
-#### Preparing an account for test ####
-
-	$ make account-set username=test password=1234
-
 #### Getting into the broker shell ####
 
-	$ make debug
+    $ ./rel/fubar/bin/fubar remote_console
 	
 #### Connecting clients ####
 
