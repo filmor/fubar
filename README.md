@@ -24,16 +24,13 @@ to/from specific client IDs or topics.
 ### Getting dependencies and building ###
 
 	$ make deps
-	$ cd deps/lager
-	$ make
-	$ cd ../..
-	$ make
+	$ make rel
 
 Note that lager may require independent build as it uses parse_transform.
 	
 ### Starting a broker ###
 
-	$ make run
+	$ ./rel/fubar/bin/fubar console
 
 There are also some command line parameters.
 
