@@ -93,7 +93,8 @@ set_address(Address) ->
 		overloaded=false,
 		load_balancing = none,
 		timeout = 10000 :: timeout(),
-		timestamp :: timestamp()
+		timestamp :: timestamp(),
+		data = [] :: [proplists:property()]
 }).
 
 -type context() :: #?CONTEXT{}.
