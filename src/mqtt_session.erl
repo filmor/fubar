@@ -26,7 +26,8 @@
 		 max_age/1,	% get max age of the session
 		 max_age/2, % set max age of the session
 		 state/1,	% get session state
-		 trace/2]).	% set trace true/false, fubars created by this session are traced
+		 trace/2,
+		 username/1]).	% set trace true/false, fubars created by this session are traced
 
 %% gen_server callbacks
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2, code_change/3,
@@ -171,6 +172,11 @@ state(Name) ->
 		Error ->
 			Error
 	end.
+
+-spec username(state()) -> nil | binary().
+username(State) ->
+	State#?STATE.username
+	.
 
 %% @doc Start or stop tracing messages from this session.
 -spec trace(pid() | binary(), boolean()) -> ok | {error, Reason :: term()}.
