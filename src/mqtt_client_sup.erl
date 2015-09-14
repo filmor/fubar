@@ -63,7 +63,7 @@ reconnect(Id) ->
 		{ok, Pid} ->
 			{ok, Pid};
 		{error, running} ->
-		        {ok,Pid} = get(Id),
+		        {ok,Pid} = ?MODULE:get(Id),
 			{ok, Pid};
 		Error ->
 			Error
