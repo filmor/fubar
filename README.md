@@ -144,7 +144,7 @@ with correct username/password.
 Full list of client parameters are:
 
 	1> C3 = mqtt_client_simple:connect([
-						{hostname, "localhost"},
+						{host, "localhost"},
 	          {port, 1884},
 	          {username, <<"romeo">>},
 	          {password, <<"1234">>},

@@ -62,7 +62,8 @@ reconnect(Id) ->
 	case supervisor:restart_child(?MODULE, Id) of
 		{ok, Pid} ->
 			{ok, Pid};
-		{error, {already_started, Pid}} ->
+		{error, running} ->
+		        {ok,Pid} = ?MODULE:get(Id),
 			{ok, Pid};
 		Error ->
 			Error
